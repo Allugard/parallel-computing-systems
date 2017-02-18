@@ -116,7 +116,6 @@ procedure Lab1 is
     			e:=2;
     			for i in 1..n loop
     				for j in 1..n loop
-    				MA(i)(j):=1;
     				MB(i)(j):=1;
     				MC(i)(j):=1;
     				MO(i)(j):=1;
