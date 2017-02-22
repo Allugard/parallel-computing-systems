@@ -13,7 +13,7 @@ use Ada.Text_IO, Ada.Integer_Text_IO, System.Multiprocessors, Ada.Synchronous_Ta
 
 procedure Lab1 is
 
-	n: integer:=520;
+	n: integer:=510;
 	p: integer:=2;
 	h: integer:=n/p;
 	
@@ -174,7 +174,7 @@ procedure Lab1 is
     			set_true(Su3);
 
     			--account
-    			MA:=f(MA,MB,MC2,MO,MT2,MZ,e,h+1,n);
+    			--MA:=f(MA,MB,MC2,MO,MT2,MZ,e,h+1,n);
     			
     			--sending a signal to T1
     			set_true(S2);
