@@ -14,7 +14,7 @@ using std::endl;
 //   A = sort(Z)*e + d*S*(MO * MK)
 
 
-const int n=1020;
+const int n=1000;
 const int p=8;
 const int h=n/p;
 
