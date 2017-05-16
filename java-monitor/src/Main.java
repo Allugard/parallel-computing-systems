@@ -11,7 +11,7 @@ public class Main {
         int n = 12;
         int p = 6;
         int eps = 2;
-        Task.init(n, p);
+        Task.init(n, p, eps);
 
         Thread [] threads = new Thread[p];
         for (int i = 0; i < p; i++) {

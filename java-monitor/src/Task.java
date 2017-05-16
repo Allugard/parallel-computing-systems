@@ -30,7 +30,7 @@ public class Task implements Runnable {
         tId = threadCount.incrementAndGet();
     }
 
-    public static void init(int n1, int p1) {
+    public static void init(int n1, int p1, int eps) {
         n = n1;
         p = p1;
         H = n/p;
@@ -40,6 +40,7 @@ public class Task implements Runnable {
         aMonitor = new IntegerMonitor();
         maxMonitor = new IntegerMonitor(Integer.MIN_VALUE);
         MA = new Matrix(n);
+        TaskFindMax.init(eps);
     }
 
 
