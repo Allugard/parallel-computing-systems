@@ -46,6 +46,18 @@ public class Matrix implements Data {
         }
     }
 
+    public static void mulMatrMatr(Matrix m1, Matrix m2, Matrix res, int begin, int end) {
+        int [][]m=new int[m1.getData().length][m1.getData().length];
+        for (int i = begin; i <end; i++) {
+            for (int j = 0; j <m.length; j++) {
+                res.setElement(i,j,0);
+                for (int k = 0; k <m.length; k++) {
+                    res.setElement(i,j, res.getElement(i,j)+m1.getElement(i,k)*m2.getElement(k,j));
+                }
+            }
+        }
+    }
+
     public static void mulMatrMatr(Matrix m1, Matrix m2) {
         int [][]m=new int[m1.getData().length][m1.getData().length];
         for (int i = 0; i <m.length; i++) {
