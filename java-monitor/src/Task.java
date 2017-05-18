@@ -69,7 +69,7 @@ public class Task implements Runnable {
 
         inputMonitor.waitSignal();
 
-        int sum = Vector.mul(B, C, (tId -1)*H, tId *H);
+        int sum = TaskMulVector.mulVector(B, C, (tId -1)*H, tId *H);
         aMonitor.add(sum);
         int max = TaskFindMax.findMax(Z, (tId -1)*H, tId *H);
         maxMonitor.setMax(max);

@@ -16,4 +16,15 @@ public class MutualExclusionMonitor <T extends Data>  {
         this.buf=buf;
     }
 
+    public synchronized void set(T data, int begin, int end){
+        if (buf.getClass() == Matrix.class){
+            for (int i = begin; i < end; i++) {
+                for (int j = 0; j <((Matrix) buf).getData().length ; j++) {
+                    ((Matrix) buf).setElement(i,j, ((Matrix) data).getElement(i,j));
+                }
+            }
+        }
+    }
+
+
 }
